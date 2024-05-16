@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Tahoma', sans-serif;
+}
+#root {
+  /* flex-контейнер для <header>, <main> и <footer> */
+  display: flex;
+  /* flex-элементы <header>, <main> и <footer> выстаиваются по вертикали */
+  flex-direction: column;
+  /* вся высота viewport браузера */
+  min-height: 100vh;
+}
+main {
+  padding-top: 20px;
+  /*
+  может как увеличиваться, так и уменьшаться, чтобы вместе с
+  <header> и <footer> занять всю высоту viewport браузера
+  */
+  flex: 1 1 auto;
+}
+.page-footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+nav {
+  box-shadow: none;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card .card-title {
+  font-size: 18px;
+}
+
+button {
+  position: absolute;
+  right: 10px;
+}
+
+.error{
+  text-align: center;
+}
+
+label {
+  margin-right: 50px;
+}
+.logo{
+  height: 50px;
+  width: 50px;
+  margin-top: 7px;
+  margin-right: 5px;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #da9006;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  animation: rotation 1s linear infinite;
+  position: relative;
+  transform: translateZ(0);
+  margin-top: 20px;
+  }
+
+
+  @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+.footer{
+  background: #da9006;
+}
+a{
+  color: #da9006;
+}
+.header{
+  background: #da9006;
+}
+.ph{
+  width: 100%;
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+  background-color: #da9006;
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+  border: 2px solid #da9006;
+}
+.btn, .btn-large, .btn-small{
+  background-color: #da9006;
+}
+.btn:hover, .btn-large:hover, .btn-small:hover {
+  background-color: #da9006;
+}
+a9{
+  font-size: 40px;
+}
